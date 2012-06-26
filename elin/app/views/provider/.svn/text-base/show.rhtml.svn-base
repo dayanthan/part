@@ -1,8 +1,0 @@
-<% for column in Provider.content_columns %>
-<p>
-  <b><%= column.human_name %>:</b> <%= @provider.send(column.name) %>
-</p>
-<% end %>
-
-<%= link_to 'Edit', :action => 'edit', :id => @provider.id %>
-<%= link_to 'Back', :action => 'list' %>

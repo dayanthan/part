@@ -1,7 +1,0 @@
-<% if @failed > 0 %>
-	<span style="color:red"><%=@failed%> of your documents failed to go through.  Please contact <a href="mailto:support@lloydsliens.com">support</a>.<br><br>
-<%else%>
-
-<p>Thank you for your purchase.  Periodically check the <%= link_to "pending documents", :controller => :file, :action => :purchased%> page to retrieve your recorded document.</p><br><br>
-<%end%>
-<%= link_to "E-File Home", :controller => :file%> :: <%= link_to "Go to your E-Lien account", :controller => :lien%>

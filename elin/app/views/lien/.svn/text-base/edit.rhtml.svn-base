@@ -1,8 +1,0 @@
-<h1>Editing lien</h1>
-<% form_remote_tag  :url => {:action => 'update', :id => @lien} do %>
-  <%= render :partial => 'form' %>
-  <%= submit_tag 'Edit' %>
-<% end %>
-
-<%= link_to 'Show', :action => 'show', :id => @lien %> |
-<%= link_to 'Back', :action => 'list' %>

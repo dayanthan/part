@@ -1,4 +1,0 @@
-<p><label for="lien_notes">Notes</label><br/>
-<%= text_area 'lien', 'notes', "rows" => 20, "cols" => 65, :onblur => :"new Effect.Highlight(this);" %></p>
-<%= link_to "Print Notes", {:controller => 'pdf', :action => 'notes', :id => @lien.id}%> <small> (save first)</small>
-<br><br>

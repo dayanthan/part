@@ -1,9 +1,0 @@
-<h2>New Category</h2>
-<% @categories.each do |c| %>
-	<%= c.name %><br>
-<%end%>
-
-<%= form_tag :controller => :category, :action => :create %>
-	<%= text_field :category, :name %><br>
-	<%= submit_tag "Create" %>
-</form>

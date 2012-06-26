@@ -1,9 +1,0 @@
-<div id="contentContainer" style="clear:both;padding-left:10px;">
-<h1>New Lien</h1>
-<% form_tag :action => 'create' do %>
-  <%= render :partial => 'new_lien' %>
-  <%= submit_tag "Create" %>
-<% end %>
-<br><br>
-<%= link_to 'Cancel', :action => 'list' %>
-</div>

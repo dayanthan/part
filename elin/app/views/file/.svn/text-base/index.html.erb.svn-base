@@ -1,9 +1,0 @@
-<h2>Electronic Filing with E-Lien</h2>
-<br>
-Welcome to E-Lien's Electronic filing service.  We are the <b>first</b> to bring electronic filing of physician's liens to Oklahoma.  Currently the service is only available in Tulsa County, but check this site or with your county's courthouse for updates.<br><br>
-<%= link_to "Click Here", :action => :new %> to start.
-
-<% unless session[:user] %> 
-<br><br>
-<span style="color:red;font-weight:bold">You need an E-Lien account to use our E-File services.  <%= link_to "Signup Here", :controller => :user, :action => :signup%> or <%= link_to "Login", :controller => :lien, :action => :index%></span>
-<% end %>
