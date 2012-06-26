@@ -1,0 +1,33 @@
+<div style="margin:auto; width:400px;font-size:14px; border:1px solid #000;padding:20px 0px 10px 0px;">
+
+<%= form_for [:post, @comment],:html =>{:id =>'frmuser', :multipart => true}  do |f| %>
+ <% if @comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @comment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div style="text-align:center;">
+  <p>
+    <%= f.label :auther_name, "AuthoName" %><br />
+    <%= f.text_field :auther_name,:class =>"validate[required]"%>
+  </p>
+    
+  <p > 
+     <%= f.label :comment, "Comment" %><br />
+     <%= f.text_area :comment, :rows=>10, :cols=>40, :background=>"#6600CC", :class =>"validate[required]"%>
+  </p>
+
+  <p><%= f.submit "Submit" %>
+     <input type="reset" value="Reset" />
+  </p>
+ </div>
+
+<% end %>
+</div>

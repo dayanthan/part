@@ -1,0 +1,29 @@
+<h1 style="padding:0px 0px 10px 0px ; text-align:center;">
+  <font size="6" color="#780000 "><b>comments</b></font>
+</h1>
+<div style="margin:auto; text-align:center; width:450px;font-size:14px; border:1px solid #000;padding:20px 0px 10px 0px;">
+
+<table align="center">
+   <tr>
+      <th>Author_name</th>
+      <th>Comments</th>
+   </tr>
+
+ <% @comments.each do |comment| %>
+   <tr>
+     <td><%= comment.auther_name %></td>
+     <td><%= comment.comment%></td>
+     <td><%= link_to 'Show', [@post,comment] %></td>
+     <td><%#= link_to 'Edit', edit_post_comment_path(comment, @post) %></td>
+     <td><%= link_to 'Destroy',[@post,comment], confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+ <% end %>
+</table>
+<div style="float:right; padding: 25px 0px;">
+     <%= will_paginate @comment %>          
+</div>
+
+
+</div>
+
+<p><%= link_to "New comment", new_post_comment_path %></p>

@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <%= javascript_include_tag "jquery-validation/jquery.js"%>
+    <%= javascript_include_tag "jquery-validation/jquery.validationEngine.js" %>
+    <%= javascript_include_tag "jquery-validation/jquery.validationEngine-en.js" %>
+    <%= stylesheet_link_tag "jquery-validation/validationEngine.jquery.css" %>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>EIUS</title>
+    
+
+    <script type="text/javascript">
+        jQuery.noConflict();
+        jQuery(document).ready(function(){
+        jQuery("#frmuser").validationEngine();
+      });
+    </script>
+  </head>
+<body>
+	<h1 style="padding:0px 0px 10px 0px ; text-align:center;">
+  <font size="6" color="#780000 "><b>New part</b></font></h1>
+<%= render :partial => 'form' %>
+
+<p><%= link_to "Back to List", post_parts_path %></p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<h1 style="padding:0px 0px 10px 0px ; text-align:center;">
+  <font size="6" color="#780000 "><b>Comment</b></font></h1>
+<div style="margin:auto; text-align:center; width:400px;font-size:14px; border:1px solid #000;padding:20px 0px 10px 0px;">
+<p>
+  <strong>Author_name:</strong>
+
+  <%= @comment.auther_name %>
+</p>
+<p>
+  <strong>Comments:</strong>
+  <%= @comment.comment %>
+</p>
+</div>
+
+<p>
+  <%= link_to "Destroy", @comments, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", post_comments_path %>
+</p>

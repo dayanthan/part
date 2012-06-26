@@ -1,0 +1,18 @@
+<h1 style="padding:0px 0px 10px 0px ; text-align:center;">
+  <font size="6" color="#780000 "><b>Post</b></font></h1>
+<div style="margin:auto; text-align:center; width:400px;font-size:14px; border:1px solid #000;padding:20px 0px 10px 0px;">
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @post.name %>
+</p>
+
+
+</p>
+
+</div>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

@@ -1,0 +1,26 @@
+<h1 style="padding:0px 0px 10px 0px ; text-align:center;">
+  <font size="6" color="#780000 "><b>Listing posts</b></font></h1>
+<table align="center" >
+    <tr>
+    <th>Names</th>
+    <th>Comments</th>
+    <th>Parts</th>
+   </tr>
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.name %></td>
+    <td><%= link_to 'Comments',post_comments_path(post, @comment) %></td>
+    <td><%= link_to 'Parts',post_parts_path(post, @part) %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Delete', [post], :confirm => 'Are you sure?', :method => :delete %><td>
+    </tr>
+<% end %>
+</table>
+<div style="float:right">
+     <%= will_paginate @post %>          
+</div>
+
+<br />
+
+<%= link_to 'New post', new_post_path %>

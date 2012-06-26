@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "Untitled") %></title>
+    <%= csrf_meta_tag %>
+	<%= stylesheet_link_tag  "application" %>
+
+	<!-- JS framework -->
+	<%= javascript_include_tag 'jquery-1.6.1.min', 'custom-form-elements' %>
+
+	<!-- JS validations -->
+	<%= javascript_include_tag "jquery-validation/jquery.js" %>
+	<%= stylesheet_link_tag "jquery-validation/validationEngine.jquery.css" %>
+	<%= javascript_include_tag "jquery-validation/jquery.validationEngine.js" %>
+	<%= javascript_include_tag "jquery-validation/jquery.validationEngine-en.js" %>
+
+	<!-- Our App specific js  -->
+	<%= javascript_include_tag "application" %>
+        <%= stylesheet_link_tag "facybox/facybox.css","facybox/facybox_urls.css" %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container">
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%- end -%>
+      
+      
+        <h1><%=h yield(:title) %></h1>
+     
+      
+      <%= yield %>
+    </div>
+  </body>
+</html>

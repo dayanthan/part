@@ -1,0 +1,26 @@
+<h1 style="padding:0px 0px 10px 0px ; text-align:center;">
+  <font size="6" color="#780000 "><b>Parts</b></font></h1>
+<div style="margin:auto; text-align:center; width:450px;font-size:14px; border:1px solid #000;padding:20px 0px 10px 0px;">
+
+<table align="center">
+   <tr>
+      <th>Part_name</th>
+   </tr>
+
+ <% @parts.each do |part| %>
+   <tr>
+     <td><%= part.name %></td>
+     
+     <td><%= link_to 'Show', [@post,part] %></td>
+     <td><%#= link_to 'Edit', edit_post_part_path(part, @post) %></td>
+     <td><%= link_to 'Destroy',[@post,part], confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+ <% end %>
+</table>
+<div style="float:right; padding: 25px 0px;">
+     <%= will_paginate @part %>          
+</div>
+
+</div>
+
+<p><%= link_to "New part", new_post_part_path %></p>

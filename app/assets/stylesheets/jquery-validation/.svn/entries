@@ -1,0 +1,52 @@
+8
+
+dir
+23
+http://192.168.1.101/svn/shooteat/public/stylesheets/jquery-validation
+http://192.168.1.101/svn/shooteat
+
+
+
+2011-06-24T14:21:48.989823Z
+22
+mangala
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9aa589d8-56c3-4bab-9481-670848a8daf0
+
+template.css
+file
+
+
+
+
+2011-06-14T05:12:23.000000Z
+8065d335f77378d20c6ef522c5b3cca6
+2011-06-14T05:12:23.530242Z
+1
+raj
+
+validationEngine.jquery.css
+file
+
+
+
+
+2011-06-24T14:21:48.000000Z
+4f583fa203f452b4c014c851f9aa2435
+2011-06-24T14:21:48.989823Z
+22
+mangala
+
