@@ -1,0 +1,3 @@
+page.insert_html :bottom, 'liens', :partial => 'lien' 
+page.visual_effect :highlight, "lien_#{@lien.id}" 
+page.form.reset 'lien_form' 

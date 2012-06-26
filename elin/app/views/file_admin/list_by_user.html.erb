@@ -1,0 +1,14 @@
+<br clear="all">
+	<table width="100%">
+	<th align="left">E-File ID</th><th align="left">E-Lien Status</th><th>Original Document</th><th align="left">ERX Code</th><th align="left">ERX Description</th><th>ERX Document</th>
+	<% for d in @documents %>
+	<tr align="left">
+		<td><%=d.id%></td>
+		<td><%="Uploaded" if d.status == 0%><%="<span style='color:orange'>Sent To Recorder</span>" if d.status == 1%><%="Recorded / Ready for Download" if d.status == 2%><%="<span style='color:red'>Rejected</span>" if d.status == 3%><%="<span style='color:green'>Recorded / Downloaded</span>" if d.status == 4%><%="<span style='color:red'>Failed</span>" if d.status == 5%></td>
+		<td><%= link_to "Download", :action => :download_original, :id => d.id%></td>
+		<td><%= d.status_code%></td>
+		<td><%= d.status_condition%></td>
+		<td><%= link_to "Download", :action => :download_ERX, :id => d.id%></td>
+	</tr>
+<%end%>
+</table>

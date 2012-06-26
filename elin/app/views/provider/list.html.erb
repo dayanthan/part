@@ -1,0 +1,34 @@
+<h1>Listing providers</h1>
+<small><%= link_to 'Back to menu', :controller => 'admin', :action => 'menu' %></small>
+<br><br>
+<%= link_to("Categories", :controller => 'category', :action => 'index') %><small> (<%= Category.count %>)</small><br>
+<br>
+<table>
+  <th>company</th><th>contact_name</th><th>email</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Phone</th><th>Contract Remaining in days</th>
+<% for providers in @providers %>
+  <tr>
+ 	<td><%= providers.company %></td>
+	<td><%= providers.contact_name %></td>
+	<td><a href="mailto:<%= providers.email %>"><%= providers.email %></a></td>
+	<td><%= providers.address %></td>
+	<td><%= providers.city %></td>
+	<td><%= providers.state %></td>
+	<td><%= providers.zip %></td>
+	<td><%= providers.phone %></td>
+	<%# @time_left = (providers.start_date.to_date.advance(:months => providers.contract_length) - Date.today) %>
+	<%# if @time_left > 0%>
+	<td><%#= @time_left%></td>
+	<%#else%>
+	<td><strong style="color:red"><%#= @time_left%></strong></td>
+	<%#end%>
+	 <td><%= link_to 'Edit', :action => 'edit', :id => providers %></td>
+    <td><%= link_to 'Show', :action => 'show', :id => providers %></td>
+   
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => providers }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New provider', :action => 'new' %>

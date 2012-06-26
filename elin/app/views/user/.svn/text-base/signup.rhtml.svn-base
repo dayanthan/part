@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+		<meta http-equiv="Content-Language" content="en-us" /> 
+		<meta name="author" Content="Matt Swezey">
+		<META NAME="DESCRIPTION"
+CONTENT="Lienmaker is an online application that gives Physicians, Clinics, Hospitals, and Amublances an easy tool to generate and file Liens electronically.">
+<META NAME="KEYWORDS" CONTENT="physican, legal forms, lien, medical lien, physician lien, hospital lien, ambulance, hospital, legal service, medical legal, lienmaker ">
+			<title>E-Lien</title> 
+			<%= stylesheet_link_tag "style" %> 
+			<%= javascript_include_tag :defaults %> 
+			<%= javascript_include_tag ("lightbox.js") %> 
+			<%= javascript_include_tag ("tooltip.js") %>
+			
+	</head> 
+	<body> 
+		<div id="container">
+		
+			<div id="header" style="text-align:left"> 
+				
+				
+			</div> 
+			<div id="top_ad" style="text-align:center;margin:5px auto;">
+				
+
+			</div>
+		
+			<% if flash[:notice] %><div class="notice"><%= flash[:notice] %></div><% end %>
+			<div id="content"> 
+
+				<div id="contentContainer">
+					
+					
+					<%= error_messages_for 'user' -%> 
+					<fieldset> 
+						<center><h1>User Signup</h1></center><br>
+					<table>
+					<tr>
+						
+					<td align="right">
+						
+					<%= form_tag({:action => 'signup'}) -%> 
+					
+					<label for="user_login">Desired Login: 
+					<%= text_field :user, :login, :onfocus => "new Effect.Appear('loginNote')", :onblur => "Element.hide('loginNote')"-%></label> <br>
+					<div id="loginNote" style="display:none;" class="signupNote">Login must be 5-15 characters</div>
+					<label for="user_password">Password: 
+					<%= password_field :user, :password, :value => '', :onfocus => "new Effect.Appear('passNote')", :onblur => "Element.hide('passNote')" -%></label> <br>
+					<div id="passNote" style="display:none;" class="signupNote">Password must be at least 6 characters</div>
+					<label for="user_email">Email: 
+					<%= text_field :user, :email, :onfocus => "new Effect.Appear('mailNote')", :onblur => "Element.hide('mailNote')" -%></label> <br>	
+					<div id="mailNote" style="display:none;" class="signupNote">Must be a valid email address</div>
+					<label for="user_email_confirmation">Confirm Email: 
+					<%= text_field :user, :email_confirmation -%></label> <br>
+					<br><hr><br>
+					<label for="user_physician_name">Physician's Name: 
+					 <span style="color:black">Dr.</span> <%= text_field :user, :physician_name -%></label> <br>
+					<label for="user_clinic">Clinic's Name: 
+					<%= text_field :user, :clinic -%></label> <br>
+					<label for="user_address">Address: 
+					<%= text_field :user, :address -%></label> <br>
+					<label for="user_city">City: 
+					<%= text_field :user, :city -%></label> <br>
+					<label for="user_state">State: 
+					<%= text_field :user, :state, :size => '3', :maxlength=> 2, :onfocus => "new Effect.Appear('stateNote')", :onblur => "Element.hide('stateNote')"-%></label>
+					<div id="stateNote" style="display:none;" class="signupNote">Please enter your state's two character postal abbreviation.  This customizes the format of the lien for your state.</div>
+					<label for="user_zip">Zip: 
+					<%= text_field :user, :zip, :size => 6, :maxlength => 5 -%></label>  <br><br>
+					<label for="user_phone">Phone: 
+					<%= text_field :user, :phone_area, :size => 4, :maxlength => 3 -%> <%= text_field :user, :phone_prefix, :size => 4, :maxlength => 3 -%> <%= text_field :user, :phone_suffix, :size => 5, :maxlength => 4 -%></label> <br>
+					<br><br>
+					<label for="user_tax">Tax ID Number: 
+					<%= text_field :user, :tax, :onfocus => "new Effect.Appear('taxNote')", :onblur => "Element.hide('taxNote')" -%></label>  <div id="taxNote" style="display:none;" class="signupNote">This is only required for Oklahoma users.</div>
+					<br><br>
+					<label for="user_payable">The name of company or individual the tax id number is associated with:<br>
+					<%= text_field :user, :payable, :onfocus => "new Effect.Appear('payableNote')", :onblur => "Element.hide('payableNote')"  -%></label> <div id="payableNote" style="display:none;" class="signupNote">This is to whom the checks will be made out.</div>
+					
+					<br><br>
+					
+					<label for="user_county">County Jurisdiction: 
+					<%= text_field :user, :county -%></label> <br>
+					<br><hr><br><center>
+					<b>Choose your document size settings: </b><br><br>
+					
+					<select name="user[paper]">
+						<option value ="0">Letter</option>
+					 	<option value ="1">Legal</option>
+					</select><br><br>
+					
+					<hr>
+					<br>
+					<center>
+
+					<b>You must read and agree to our </b><br><%= link_to "Terms of Use", {:action => 'terms'}, :target => '_blank' %> and <%= link_to "Privacy Policy", {:action => 'privacy'}, :target => '_blank' %><br><br>
+					<%= check_box :user, :terms_of_service%> I have read and accept the <b>Terms of Use</b><br>
+					
+					<br>
+					
+					<%= check_box :user, :newsletter, :checked => true %> Signup for our newsletter<br><br>
+					<%= hidden_field :user, :account, :value => '0' %>
+					<%= submit_tag 'Create my account' -%>
+					
+					
+
+
+					</td>
+					<td width="15%"></td>
+					</tr>
+					</table>
+					</fieldset> 
+					</form>
+				</div>
+			</div> 
+			<div id="footer">
+			 <%= link_to "Terms of Use", {:controller => 'user', :action => 'terms'}, :target => '_blank' %> | <%= link_to "Privacy Policy", {:controller => 'user', :action => 'privacy'}, :target => '_blank' %> | E-Lien &copy 2008	 All Rights Reserved
+				</div>
+			</body> 
+</html>

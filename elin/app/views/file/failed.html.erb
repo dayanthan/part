@@ -1,0 +1,18 @@
+<h1>Failed Documents</h1>
+<br>
+The following documents were not successfully transmitted to the courthouse.  Please contact support and provide your username and the document ID #.<br><br>
+<table width="100%">
+		<th align="left">Document ID</th><th align="left">Patient Name</th><th align="left">Submitted Date</th><th align="left">Status Code</th>
+	<% for document in @documents %>
+	<% if document.updated_at > (Time.now - 90.days) %>
+	<tr>
+		<td><%= document.id %></td>
+		<td align="left"><%= document.grantee_first %> <%= document.grantee_last%></td>
+		<td><%= document.sent_date%></td>
+		<td><%=document.status_code%></td>
+
+	</tr>
+<% end %>	
+<% end %>
+</table>
+<br><br>

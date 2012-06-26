@@ -1,0 +1,7 @@
+<div class="searchResult">
+<b>Patient:</b> <%= link_to lien.patient_last.to_s + ", " + lien.patient_first.to_s, {:action => 'patient', :id => lien.id} -%> 	<%= image_tag "dollar-red.gif", :width => "15px"  if lien.case_collected_date != nil and lien.case_release_date == nil %>
+		<%= image_tag "dollar.gif", :width => "15px"  if lien.case_collected_date != nil and lien.case_release_date != nil %><br>
+<b>Attorney:</b> <%= lien.patient_attorney_name.to_s %><br>
+<b>Accident Date:</b> <%= lien.case_accident_date.to_s %><br>
+<b>Lien Amount:</b> <%= number_to_currency(lien.case_lien_amount) %><br>
+</div><br>

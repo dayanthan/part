@@ -1,0 +1,55 @@
+<br><br>
+
+<div class="css_col_left">
+
+			<div class="edit_header">Patient</div>
+			<b>First Name:</b><br> <%= text_field :lien, :patient_first, :size => 25, :maxlength => 14 %> <br>
+			<b>Last Name:</b><br> <%= text_field :lien, :patient_last, :size => 25, :maxlength => 14 %><br>
+			<b>Address:</b><br> <%= text_field :lien, :patient_address, :size => 25, :maxlength => 25 %> <br>
+			<b>City:</b><br> <%= text_field :lien, :patient_city, :size => 25, :maxlength => 15 %><br>
+			<b>State:</b><br> <%= text_field :lien, :patient_state, :size => 25, :maxlength => 2 %><br>
+			<b>Zip:</b><br> <%= text_field :lien, :patient_zip, :size => 25, :maxlength => 10 %><br>
+			<b>Home Phone:</b><br> <%= text_field :lien, :patient_home, :size => 25 %><br>
+			<b>Cell Phone:</b><br> <%= text_field :lien, :patient_cell, :size => 25 %><br>
+</div>
+
+<div class="css_col_right">
+		
+			<div class="edit_header">Attorney</div>
+			<b>Name:</b><br> <%= text_field :lien, :patient_attorney_name, :size => 25, :maxlength => 25 %><br>
+			<small><b>Hint:</b> if patient does not have an attorney, enter "unknown" for easy searching later</small><br><br>
+			<b>Address:</b><br> <%= text_field :lien, :patient_attorney_address, :size => 25, :maxlength => 25  %><br>
+			<b>City:</b><br> <%= text_field :lien, :patient_attorney_city , :size => 25, :maxlength => 15 %><br>
+			<b>State:</b><br> <%= text_field :lien, :patient_attorney_state , :size => 3, :maxlength => 2 %>
+			<b>Zip:</b> <%= text_field :lien, :patient_attorney_zip, :size => 10, :maxlength => 10 %><br>
+			<b>Phone:</b><br> <%= text_field :lien, :patient_attorney_phone, :size => 13 %><br>
+			<b>Fax:</b><br> <%= text_field :lien, :patient_attorney_fax, :size => 25 %><br>
+
+</div>
+
+
+<div class="css_tr"></div>
+<div class="css_col_left"> 
+			<div class="edit_header">Patient's Insurance Company</div>
+				<select id="insurance_company" name="lien[patient_insurance_company]">
+					<%= options_for_select(InsuranceCompany.find(:all, :conditions => "created_by = 0 OR created_by =" + @user.id.to_s + " ", :order => "name ASC").collect {|c| [ c.name, c.id ] }, @lien.patient_insurance_company.to_i) %>
+				</select><br>
+				<small><%= link_to '(edit list)', {:action => :list, :controller => :user_insurance, :back_to_lien => @lien.id }%></small><br>
+			 <%= observe_field 'insurance_company',
+				 :update => 'insurance_info',
+				 :url    => { :action => 'insurance'},
+				 :with   => "id" %>
+			  
+				<div id="insurance_info">
+					<b>Address:</b><br> <%= text_field :lien, :patient_insurance_address, :size => 25, :maxlength => 25  %><br>
+					<b>City:</b><br> <%= text_field :lien, :patient_insurance_city, :size => 25, :maxlength => 15 %><br>
+					<b>State:</b><br> <%= text_field :lien, :patient_insurance_state, :size => 25, :maxlength => 2  %><br>
+					<b>Zip:</b><br> <%= text_field :lien, :patient_insurance_zip, :size => 25, :maxlength => 10  %><br>
+				</div>
+			<b>Adjuster:</b><br> <%= text_field :lien, :patient_insurance_adjuster, :size => 25, :maxlength => 25  %><br>
+			<b>Phone:</b><br> <%= text_field :lien, :patient_insurance_phone, :size =>13  %>
+			<b>Ext:</b> <%= text_field :lien, :patient_insurance_ext, :size => 6, :maxlength => 5  %><br>
+			<b>Claim/Policy #:</b><br> <%= text_field :lien, :patient_insurance_claim, :size => 25, :maxlength => 25 %><br>
+</div>
+
+<div class="css_tr"></div>

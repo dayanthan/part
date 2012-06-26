@@ -1,0 +1,4 @@
+<b>Address:</b><br><input id="lien_other_insurance_address" name="lien[other_insurance_address]" size="25" maxlength="25" type="text" value="<%= @insurance.address %>" /><br>
+<b>City:</b><br><input id="lien_other_insurance_city" name="lien[other_insurance_city]" size="25" maxlength="15" type="text" value="<%= @insurance.city %>" /><br>
+<b>State:</b><br><input id="lien_other_insurance_state" name="lien[other_insurance_state]" size="25" maxlength="2" type="text" value="<%= @insurance.state %>" /><br>
+<b>Zip:</b><br><input id="lien_other_insurance_zip" name="lien[other_insurance_zip]" size="25" maxlength="10" type="text" value="<%= @insurance.zip %>" /><br>

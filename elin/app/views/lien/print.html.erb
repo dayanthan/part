@@ -1,0 +1,41 @@
+<div>
+
+	<h1 style="background:#DDEEF7;color:#348BCB;margin-bottom:10px;padding:4px;"><%= "#{@lien.patient_last}, #{@lien.patient_first}" %><span style="font-size:medium;color:#CCC"> Accident Date: <%= @lien.case_accident_date.to_s %></span></h1>
+	
+	<%= image_tag "paper.png", :style => "float:right;", :height => "125px", :width => "125px" %>
+	
+	<ul class="liens">
+		<li><%= image_tag "icons/print.gif" %> <b>Print</b>
+
+<% if @user_layout == "standard"%>
+
+	<% if @user.paper == 0 %>
+		
+			<ul id="print_options">
+				<li><%= link_to "Lien", :controller => "pdf", :action => "lien_letter", :id => @lien.id %></li>
+				<li><%= link_to "Release", :controller => "pdf", :action => "release_letter", :id => @lien.id %></li>
+				<li><%= link_to "Notes", :controller => "pdf", :action => "notes", :id => @lien.id if @lien.notes.count() > 0 %></li>
+			</ul>
+	<% else %>
+			<ul id="print_options">
+				<li><%= link_to "Lien", :controller => "pdf", :action => "lien_legal", :id => @lien.id %></li>
+				<li><%= link_to "Release", :controller => "pdf", :action => "release_legal", :id => @lien.id %></li>
+				<li><%= link_to "Notes", :controller => "pdf", :action => "notes", :id => @lien.id  if @lien.notes.count() > 0 %></li>
+			</ul>
+	<% end %>
+<% else %>
+			<ul id="print_options">
+				<li><%= link_to "Lien", :controller => "pdf", :action => "lien_contractual", :id => @lien.id %></li>
+				<li><%= link_to "Notes", :controller => "pdf", :action => "notes", :id => @lien.id if @lien.notes.count() > 0 %></li>
+			</ul>
+<% end %>
+		<li><%= image_tag "icons/e-file.gif" %> Electronically File <br><small>(not available in this jurisdiction)</small></li>
+		<li><%= image_tag "icons/edit.gif" %> <%= link_to "Edit", :action => "patient", :id => @lien.id %></li>
+		<li><%= image_tag "icons/delete.gif" %> <%= link_to "Delete", {:controller => "@lien", :action => "delete", :id => @lien.id }, :confirm => 'Are you sure?' %></li>
+	</ul>		
+	
+	<p class="footer" >
+		<h3><%= link_to "Back", :controller => "lien", :action => "list" %></h3>
+	</p>
+</div>
+		

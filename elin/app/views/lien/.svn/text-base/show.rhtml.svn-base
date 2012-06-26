@@ -1,0 +1,18 @@
+<%= link_to 'Back', :action => 'list' %><br><br>
+<b>Patient Last Name:</b> <%= in_place_editor_field :lien, :patient_last %><br> 
+<b>Patient First Name:</b> <%= in_place_editor_field :lien, :patient_first %> <br>
+<b>Patient Address:</b> <%= in_place_editor_field :lien, :patient_address %> <br>
+<b>Patient City:</b> <%= in_place_editor_field :lien, :patient_city %><br>
+<b>Patient State:</b> <%= in_place_editor_field :lien, :patient_state %><br>
+<b>Patient Zip:</b> <%= in_place_editor_field :lien, :patient_zip %><br>
+<b>Patient Home Phone:</b> <%= in_place_editor_field :lien, :patient_home %><br>
+<b>Patient Cell Phone:</b> <%= in_place_editor_field :lien, :patient_cell %><br>
+<div style="display:none;">
+<% for column in Lien.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @lien.send(column.name) %>
+</p>
+<% end %>
+</div>
+<br><br>
+<%= link_to 'Back', :action => 'list' %>

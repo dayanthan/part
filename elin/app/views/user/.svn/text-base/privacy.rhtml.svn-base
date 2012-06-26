@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+		<meta http-equiv="Content-Language" content="en-us" /> 
+		<meta name="author" Content="Matt Swezey">
+		<META NAME="DESCRIPTION"
+CONTENT="Lienmaker is an online application that gives Physicians, Clinics, Hospitals, and Amublances an easy tool to generate and file Liens electronically.">
+<META NAME="KEYWORDS" CONTENT="physican, legal forms, lien, medical lien, physician lien, hospital lien, ambulance, hospital, legal service, medical legal, lienmaker ">
+			<title>E-Lien</title> 
+			<%= stylesheet_link_tag "style" %> 
+			<%= javascript_include_tag :defaults %> 
+			<%= javascript_include_tag ("lightbox.js") %> 
+			<%= javascript_include_tag ("tooltip.js") %>
+			
+	</head> 
+	<body> 
+		<div id="container">
+		
+			<div id="header" style="text-align:left"> 
+				
+				
+			</div> 
+			<div id="top_ad" style="text-align:center;margin:5px auto;">
+				
+
+			</div>
+		
+			<% if flash[:notice] %><div class="notice"><%= flash[:notice] %></div><% end %>
+			<div id="content"> 
+
+				<div id="contentContainer">
+<h2>E-LIEN’s PRIVACY STATEMENT</h2><br>
+<div class="legal">
+At E-Lien, the privacy and protection of your personal and information is very important to us. That's why we've created this privacy statement, which fully describes our information gathering and dissemination practices. It is the best way we can demonstrate our firm commitment to your privacy. E-Lien uses the data you enter into our database for the following purposes:
+<br>
+<ul>
+	<li>Building your E-Lien account </li>
+	<li>Personalizing delivery of the content contained within our Web site </li>
+	<li>Facilitating restricted promotions and marketing efforts </li>
+	<li>Personalizing content and information sent when you subscribe to our e-mail services </li>
+</ul>
+
+When you register with E-lien, we ask for your name, company name and e-mail address as well as additional information needed to be repeatedly merged or to format your finished lien(s). We use this to contact you when necessary. E-Lien may also send you occasional promotional e-mail messages should we begin to offer new services that we believe you may be interested in. 
+<br><br>
+<h4>Use of Information Stored On Our Database</h4><br>
+We also use information you store on our database to generate lists which may be shown to affiliates, subsidiaries, licensees, successors, and partners. That information will not be any information greater than what any person can obtain simply by publicly viewing the mechanic's and materialman's lien docket in the county where your liens will be filed and stored which shows the itemized statement that will be filed with your lien, the amount claimed, the identity of the insurance policy or policies against which the lien is asserted, if any, the name and address of the physician, hospital, ambulance, or any other type of medical provider claiming the lien, the name and address of injured person, their attorney, and the person, firm, or corporation against whom the claim is made.  Certain confidential information -- such as your password -- will not be disclosed in any of these parties. 
+<br><br>
+<h4>Security Precautions</h4><br>
+
+Your E-Lien account information is password-protected so that you and only you have access to this personal information. Please do not disclose your password to anyone. Always remember to sign out of your E-Lien account and close your browser window when your transactions are complete. This helps keep your account safe. 
+<br>
+While we strive to prevent your personal information, no data transmission over the Internet is guaranteed to be 100% secure. Thus, E-Lien cannot ensure or warrant the security of any information during transmission to or from our site, and you submit information to us at your own risk. However, we do our best to ensure the highest level of security on all of our systems. 
+<br>
+<br><br>
+<h4>Cookies</h4><br>
+
+We are committed to providing personalized products and services to you. In order to do so, E-Lien uses cookies to store a unique identifier. A cookie is defined as a small amount of text that is sent to your browser from a Web server and stored on your computer's hard drive. If your browser is configured to enable cookies, then your browser adds the text sent to the appropriate file. Your browser will only allow E-Lien to read cookies that came from our web servers. This means that other web sites will not be able to use any information that E-Lien stores on your computer as a cookie. 
+<br>
+E-Lien uses cookies to tell us that you have visited our site before, to automatically display information you have requested. They are used to help us simplify and enhance your experience while on our sites. 
+<br>
+Our websites contain links to other sites. E-Lien is not responsible for the privacy practices or the content of these other websites. 
+<br>
+<br><br>
+<h4>Copyrights & Trademarks</h4><br>
+
+E-Lien® is a registered trademark and copyright All rights reserved. 
+<br><br>
+<h4>Privacy Policy Changes</h4><br>
+
+If we make changes to our privacy policy, we will post those changes in this area of  our Web site for you to review.  It is recommended you review for any changes.
+<br><br>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4341848-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

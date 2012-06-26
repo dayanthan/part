@@ -1,0 +1,122 @@
+%PDF-1.3
+%âãÏÓ
+
+1 0 obj
+<< /Type /Catalog
+/Outlines 2 0 R
+/Pages 3 0 R>>
+endobj
+2 0 obj
+<< /Type /Outlines >>
+endobj
+3 0 obj
+<< /Type /Pages
+/Kids [6 0 R
+]
+/Count 1
+/Resources <<
+/ProcSet 4 0 R
+/Font << 
+/F1 8 0 R
+/F2 10 0 R >>
+>>
+/MediaBox [0 0 612.0 792.0]
+ >>
+endobj
+4 0 obj
+[/PDF /Text ]
+endobj
+5 0 obj
+<<
+/CreationDate (D:200807281800)
+/Creator (server)
+/Producer (PDF::Writer for Ruby)
+>>
+endobj
+6 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 1902 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+BT 176.101 740.376 Td /F2 14.0 Tf 0 Tr (All Liens) Tj /F1 14.0 Tf 0 Tr (      Mon Jul 28 13:00:34 -0500 2008) Tj ET
+BT 36.000 724.752 Td /F1 14.0 Tf 0 Tr (Patient Name      Attorney         Accident Date        Lien Amount) Tj ET
+BT 36.000 702.432 Td /F1 20.0 Tf 0 Tr ( ) Tj ET
+BT 36.000 689.040 Td /F1 12.0 Tf 0 Tr (, test      unknown 2008-07-09 ) Tj ET
+BT 36.000 666.720 Td /F1 20.0 Tf 0 Tr ( ) Tj ET
+BT 36.000 653.328 Td /F1 12.0 Tf 0 Tr (, 1      unknown 2008-07-28 ) Tj ET
+BT 36.000 631.008 Td /F1 20.0 Tf 0 Tr ( ) Tj ET
+BT 36.000 617.616 Td /F1 12.0 Tf 0 Tr (, dsaf      unknown 2008-07-28 ) Tj ET
+BT 36.000 595.296 Td /F1 20.0 Tf 0 Tr ( ) Tj ET
+BT 36.000 581.904 Td /F1 12.0 Tf 0 Tr (, asdf      unknown 2008-07-28 ) Tj ET
+BT 36.000 559.584 Td /F1 20.0 Tf 0 Tr ( ) Tj ET
+BT 36.000 546.192 Td /F1 12.0 Tf 0 Tr (afsdf,       unknown 2008-07-28 ) Tj ET
+BT 36.000 523.872 Td /F1 20.0 Tf 0 Tr ( ) Tj ET
+BT 36.000 510.480 Td /F1 12.0 Tf 0 Tr (asdf,       unknown 2008-07-28 ) Tj ET
+BT 36.000 488.160 Td /F1 20.0 Tf 0 Tr ( ) Tj ET
+BT 36.000 474.768 Td /F1 12.0 Tf 0 Tr (Doe, John      Lloyd Benedict 2008-04-08 2832.0) Tj ET
+BT 36.000 452.448 Td /F1 20.0 Tf 0 Tr ( ) Tj ET
+BT 36.000 439.056 Td /F1 12.0 Tf 0 Tr (Doe, John      Lloyd Benedict 2008-04-08 ) Tj ET
+BT 36.000 416.736 Td /F1 20.0 Tf 0 Tr ( ) Tj ET
+BT 36.000 403.344 Td /F1 12.0 Tf 0 Tr (Johnson, Mark      Lloyd Benedict 2007-09-22 766.98) Tj ET
+BT 36.000 381.024 Td /F1 20.0 Tf 0 Tr ( ) Tj ET
+BT 36.000 367.632 Td /F1 12.0 Tf 0 Tr (Mantle, Mickey      Jim Carrey 2008-01-26 ) Tj ET
+BT 36.000 345.312 Td /F1 20.0 Tf 0 Tr ( ) Tj ET
+BT 36.000 331.920 Td /F1 12.0 Tf 0 Tr (Martin, Amy      unknown 2008-04-08 ) Tj ET
+BT 36.000 309.600 Td /F1 20.0 Tf 0 Tr ( ) Tj ET
+BT 36.000 296.208 Td /F1 12.0 Tf 0 Tr (Smith, John      unknown 2008-04-10 432.9) Tj ET
+BT 36.000 273.888 Td /F1 20.0 Tf 0 Tr ( ) Tj ET
+endstream
+endobj
+
+8 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+>>
+endobj
+9 0 obj
+<< /Type /Encoding
+/BaseEncoding /WinAnsiEncoding
+
+>>
+endobj
+10 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F2
+/BaseFont /Times-Bold
+/Encoding 9 0 R
+>>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000019 00000 n 
+0000000083 00000 n 
+0000000120 00000 n 
+0000000273 00000 n 
+0000000302 00000 n 
+0000000405 00000 n 
+0000000468 00000 n 
+0000002423 00000 n 
+0000002532 00000 n 
+0000002601 00000 n 
+
+trailer
+  << /Size 11
+     /Root 1 0 R
+ /Info 5 0 R
+  >>
+startxref
+2699
+%%EOF

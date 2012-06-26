@@ -1,0 +1,15 @@
+<div style="margin:auto; width:400px; height:170px;  border:1px solid #348BCB;padding:0px 0px 10px 10px;">
+	<%#div style ="border:1px solid #348BCB; width:400px; height:170px;"%>
+<div style="text-align:center; padding: 20px 10px; " >
+<h1>New admin</h1>
+<% form_tag :action => 'create' do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag "Create" %>
+<% end %>
+</div>
+
+<div style="float:left;">	
+<%= link_to 'Back',:controller=> 'lien', :action => 'list' %>
+</div>
+</div>
+

@@ -1,0 +1,14 @@
+<div style="margin:auto; width:400px; height:170px;  border:1px solid #348BCB;padding:0px 0px 10px 10px;">
+<!-- <div style="float:right;margin-top:10px;"> -->
+<%= form_tag({:controller => 'newadmins', :action => 'login'}, {:id => "login_form"}) -%> 
+	<p><label for="users_login">name</label><br/>
+<%= text_field 'newadmin', 'name'  %></p>
+
+<p><label for="users_password">Password</label><br/>
+<%= password_field 'newadmin', 'password'  %></p>
+
+	<%= submit_tag 'Login' -%> 
+	
+</form>
+</div>
+

@@ -1,0 +1,38 @@
+<br clear="all">
+<h2>Referral</h2>
+<%= link_to "Add to My Liens", :action => "add", :id => @referral.id %><br>
+<table width="560px">
+	<tr>
+		<td valign="top">
+<h3>Patient Information</h3>
+<b>Name:</b> <%= @referral.patient_first%> <%= @referral.patient_last%><br><br>
+<b>Address</b> <br><%= @referral.patient_address%><br>
+<%= @referral.patient_city%>, <%= @referral.patient_state%> <%= @referral.patient_zip%><br><br>
+<b>Home Phone:</b> <%= @referral.patient_home%><br>
+<b>Cell Phone:</b> <%= @referral.patient_cell%><br>
+<br>
+<b>Accident Date:</b> <%= @referral.case_accident_date%><br>
+<hr>
+</td>
+<td>
+<h3>Attorney Information</h3>
+<b>Name:</b> <%= @referral.patient_attorney_name%><br><br>
+<b>Address</b><br> <%= @referral.patient_attorney_address%><br>
+<%= @referral.patient_attorney_city%>, <%= @referral.patient_attorney_state%>, <%= @referral.patient_attorney_zip%><br><br>
+<b>Attorney Phone:</b> <%= @referral.patient_attorney_phone%><br>
+<b>Attorney Fax:</b> <%= @referral.patient_attorney_fax%><br>
+<hr>
+<h3>Insurance Information</h3>
+<b>Company:</b> <%= @insurance.name %><br><br>
+<b>Address</b> <br><%= @referral.patient_insurance_address%><br>
+<%= @referral.patient_insurance_city%>, <%= @referral.patient_insurance_state%>, <%= @referral.patient_insurance_zip%><br><br>
+<b>Adjuster:</b> <%= @referral.patient_insurance_adjuster%><br>
+<b>Phone:</b> <%= @referral.patient_insurance_phone%><br>
+<b>Ext:</b> <%= @referral.patient_insurance_ext%><br>
+<b>Claim / Policy Number:</b> <%= @referral.patient_insurance_claim%><br>
+<hr>
+<br>
+</td>
+</tr>
+</table>
+<%= link_to "Add to My Liens", :action => "add", :id => @referral.id %>

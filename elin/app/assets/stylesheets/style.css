@@ -1,0 +1,506 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Helvetica, Geneva, Arial, sans-serif;
+	font-size: small;
+	color: #1A8BCB;
+	background-color: #fff;
+	width:100%;
+}
+
+.clear{clear: both;}
+
+.notice {
+	color:green;
+}
+a:link, a:active, a:visited { 
+color: #348BCB; 
+} 
+.cycle {
+	color:#fff
+}
+.cycle a {
+	color:#fff;
+}
+.cycle a:hover {
+	color:#eee;
+}
+a:hover { 
+/*color: #B6D201;*/
+}
+.fieldWithErrors input{
+	background:red;
+	color:#ffffff;
+}
+.page_nav {
+	font-size:small;
+	margin-bottom:90px;
+	}
+input { margin-bottom: 5px; background:#DDEEF7} 
+.te { margin-bottom: 5px; background:#DDEEF7; height: 100px;width: 290px;} 
+.leightbox textarea {background:#FFE47A;color:#348BCB;font-size:12pt;}
+p { line-height: 150%; } 
+
+div#container { 
+position:relative;
+width:1011px;
+margin: 0 auto; 
+
+} 
+#toolBar {
+	clear:both;
+	margin: auto;
+	background:#DDEEF7;
+	
+}
+#toolBar li {
+	list-style-type:none;
+	display:inline;
+
+}
+#toolBar li:hover {
+	background:#1A8BCB;
+	
+	
+}
+#toolBar a {
+	text-decoration:none;
+	color:#1A8BCB;
+	padding:0 8px;
+}
+#toolBar a:hover {
+	color:#fff;
+	background:#1A8BCB;
+}
+#results {
+	margin: 3px 5px;	
+}
+.searchResult {
+	padding:2px 5px;border:dashed 1px #B6D201;background:#FFF;
+}
+div#header { 
+ 
+ text-align: left; 
+margin:0 auto;
+padding:0; 
+background:url('../images/e-lien-logo-green-sm.png') no-repeat center top;
+min-height:147px;
+min-width:198px;
+}
+#nav {
+  
+  width:100%;
+  font-size:180%;
+  line-height:normal;
+  }
+#nav ul {
+  margin:0;
+  padding:10px 10px 0;
+  list-style:none;
+  }
+#nav li {
+  float:left;
+  background:url("../images/nav/left-2.png") no-repeat left top;
+  margin:0;
+  padding:0 0 0 9px;
+  }
+#nav a {
+	font-family: Georgia, Palatino, "Times New Roman";
+  float:left;
+  display:block;
+  background:url("../images/nav/right-2.png") no-repeat right top;
+  padding:5px 15px 4px 6px;
+  text-decoration:none;
+  
+  }
+/* Commented Backslash Hack
+   hides rule from IE5-Mac \*/
+#nav a {float:none;}
+/* End IE5-Mac hack */
+#nav a:hover {
+ /* color:#fff;*/
+  }
+#nav #current {
+  background-image:url("../images/nav/left_on-2.png");
+  }
+#nav #current a {
+  background-image:url("../images/nav/right_on-2.png");
+  color:#333;
+  padding-bottom:5px;
+  }
+#centerdiv{
+	padding-left: 10px;
+}
+div#content { 
+background:#fff;
+width: 580px; 
+min-height:240px;
+padding:0 0 20px 0; 
+margin:0 auto;
+} 
+div#contentContainer { 
+background:#fff;
+margin:0 0px;
+border:solid 1px #DDEEF7;
+padding:10px;
+} 
+div#content-footer {
+float: left; 
+position:relative;
+bottom:0;
+width: 540px; 
+padding:0 10px 0 25px; 
+margin:0 1px 0 -10px;
+background: #9E2023 url('../images/content-bottom-right.png') no-repeat bottom right;
+min-height:95px;
+}
+div#content h3 { 
+margin-top: 15px; 
+} 
+div#lookup table {
+	margin:0px 4px;
+	border-collapse:collapse;
+}
+div#lookup td {
+	padding-left:8px;
+	text-align:left;
+}
+
+div#options { 
+float: left; 
+width: 539px;  
+margin-bottom: 10px;
+}
+div#sidebar { 
+color:#B6D201;
+float:left ;
+width: 180px; 
+margin: 5px 5px !important; 
+padding:5px;
+border: solid 1px #1A8BCB;
+} 
+#sidebarNav {
+margin-top:3px;
+margin-left:15px;
+
+}
+#sidebarNav li {
+display:inline;
+padding: 0 5px 0 5px;
+background:#fff;
+}
+div#sidebar2 { 
+width: 180px; 
+margin-left: 580px; 
+margin-top: 10px; 
+background:#FFF;
+border:solid 0px #000;
+padding:5px;
+}
+div#sidebar3 { 
+width: 180px; 
+margin-left: 580px; 
+margin-top: 10px; 
+background:#FFF;
+border:solid 0px #000;
+padding:5px;
+margin-bottom:90px;
+}
+div#help {
+margin:3px;
+background:#eee;
+padding:2px;
+border:solid 1px #CCC;
+}
+fieldset { 
+display: block; 
+width: 505px; 
+margin: 20px; 
+padding: 10px; 
+background-color: #eee; 
+} 
+fieldset > label { 
+display: block; 
+margin-bottom: 2px; 
+font-weight: bold; 
+} 
+form#login_form { 
+border: 1px solid #ccc; 
+padding: 3px; 
+} 
+form#login_form label { 
+font-size: 80%; 
+} 
+form#login_form input[type=text], 
+form#login_form input[type=password] { 
+width: 150px; 
+font-size:x-large;
+} 
+input#lien_search {
+	margin:0 5px;
+	font-size:xx-large;
+	background:#FFF;
+	color:#308BCA;
+	font-weight:bold;
+}
+.in_place_editor_field {
+	padding:1px;
+	background:#FFF;
+	border:solid 1px black;
+}
+.editor_field {
+	background:#660000;
+	color:#000;
+	font-weight:bold;
+}
+ul.liens { 
+list-style-type: none; 
+margin-bottom:10px;
+} 
+ul.liens li { 
+background-color: #fff; 
+padding: 5px; 
+font-weight:bold; 
+line-height: 140%; 
+} 
+ul.liens ul {
+	margin-left:30px;
+	list-style-type:none;
+	}
+ul.liens ul li {
+	line-height:50%;
+}
+	
+#open_search {
+	background:#660000;
+	font-size:x-large;
+}
+#open_search a {
+	text-decoration:none;
+	margin-left:20px;
+	color:#FFFFFF;
+	font-size:x-large;
+}
+#content p {
+	line-height:120%;
+}
+.lien {
+	margin:5px;
+}
+.lienSent {
+	color:red;
+}
+.lienSent input {
+	background:red;
+	color:white;
+}
+th {
+	font-size:x-small;
+	}
+
+ a img {
+	border:none;
+	}
+	
+	.leightbox {
+	color: #333;
+	display: none;
+	position: fixed;
+	top: 25%;
+	left: 25%;
+	width: 50%;
+	height: 60%;
+	padding: 1em;
+	border: 1em solid #B8B8B8;
+	background-color: white;
+	text-align: left;
+	z-index:1001;
+	overflow: auto;	
+}
+
+#overlay{
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:500;
+	background-color:#333;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	filter: alpha(opacity=80);
+}
+
+.lightbox[id]{ /* IE6 and below Can't See This */    position:fixed;    }#overlay[id]{ /* IE6 and below Can't See This */    position:fixed;    }
+
+#nav-left {
+	width:23px !important;
+	height:66px !important;
+	padding:0 !important;
+	margin-top: 24px !important;
+	background:  no-repeat bottom !important;
+}
+#nav-right {
+	width:28px;
+	height:66px;
+	float:right;
+	margin-top: 24px !important;
+	background: right bottom !important;
+}
+#lien_tabs {
+	font-family: Georgia;
+	float:left;
+    width:489px;
+    line-height:normal;
+    	
+}
+ul#lien_tabs {
+ 	margin:0;
+    padding:0;
+    list-style:none;
+    
+}
+#lien_tabs li {
+    float:left;
+    margin:0;
+    padding:0;
+}
+#lien_tabs li.here {
+	background:#DDEEF7;
+
+	}
+#lien_tabs li.here A {	
+	text-align:center;
+	color:#348BCB;
+	
+}
+#lien_tabs A {
+    display:block;
+    padding:10px 8px 10px 8px;
+    font-size:1.8em;
+    text-decoration:none;
+   
+}
+
+#lien_tabs li A:hover {
+	color:#ffffff;
+	background:#DDEEF7;
+}
+#lien_tabs A:active,
+#lien_tabs A.here:link,
+#lien_tabs A.here:visited {
+	color:#fff;
+}
+
+#lien_tabs A.here:link,
+#lien_tabs A.here:visited {
+	position:relative;
+	z-index:102;
+}
+.edit_header {
+	font-size:14pt;
+	font-weight:bold;
+	margin-top:10px;
+}
+.css_col_left {
+	float:left;
+	width:250px;
+	height:390px;
+	padding:0 10px 0 10px;
+	margin:0 0 0 5px;
+	border:solid 1px #DDEEF7;
+	overflow:visible;
+}
+.css_col_right {
+float:right;width:230px;height:390px;margin:0 5px 0 0;padding:0 10px 0 10px;border:solid 1px #DDEEF7;text-align:left;
+}
+.css_tr {
+clear:both;padding-bottom:20px;
+}
+.legal {
+	padding:24px;
+	color:#000;
+	line-height:130%;
+	
+}
+.legal ul {
+	margin:24px;
+}
+.signupNote{
+	font-size:8pt;
+	color:#B6D201;
+	text-align:;
+}
+#footer {
+	margin:auto;clear:both;text-align:center;
+}
+
+
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/final_drop.html
+Copyright (c) 2005-2007 Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+
+.menu {width:100%; position:relative; z-index:100;}
+/* hack to correct IE5.5 faulty box model */
+* html .menu {width:600px; w\idth:600px;}
+/* remove all the bullets, borders and padding from the default list styling */
+.menu ul {padding:0;margin:0;list-style-type:none;}
+.menu ul ul {width:149px;}
+/* float the list to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+.menu li {float:left;width:90px;position:relative;}
+/* style the links for the top level */
+.menu a, .menu a:visited {display:block;font-size:12px;text-decoration:none; color:#fff; width:138px; height:auto; background:#DDEEF7;padding-left:10px; line-height:29px;}
+/* a hack so that IE5.5 faulty box model is corrected */
+* html .menu a, * html .menu a:visited {width:149px; w\idth:138px;}
+
+/* style the second level background */
+.menu ul ul a.drop, .menu ul ul a.drop:visited {color:#DDEEF7;background:#EFEFEF; url() bottom right no-repeat;height:25px;}
+/* style the second level hover */
+.menu ul ul a.drop:hover{background:#DDEEF7 url() bottom right no-repeat;}
+.menu ul ul :hover > a.drop {background:#DDEEF7 url() bottom right no-repeat;}
+/* style the third level background */
+.menu ul ul ul a, .menu ul ul ul a:visited {background:#ececec;height:25px;}
+/* style the third level hover */
+.menu ul ul ul a:hover {background:#b2ab9b;}
+
+
+/* hide the sub levels and give them a positon absolute so that they take up no room */
+.menu ul ul {visibility:hidden;position:absolute;height:0;top:31px;left:0; width:149px;}
+/* another hack for IE5.5 */
+* html .menu ul ul {top:30px;t\op:31px;}
+
+/* position the third level flyout menu */
+.menu ul ul ul{left:140px; top:-1px; width:149px;z-index:101;}
+
+/* position the third level flyout menu for a left flyout */
+.menu ul ul ul.left {left:-149px;}
+
+/* style the table so that it takes no part in the layout - required for IE to work */
+.menu table {position:absolute; top:0; left:0; border-collapse:collapse;;}
+
+/* style the second level links */
+.menu ul ul a, .menu ul ul a:visited {background:#EFEFEF; color:#000; height:auto; line-height:1em; margin-top:-1px;padding:0px 10px;height:25px; width:128px;}
+/* yet another hack for IE5.5 */
+* html .menu ul ul a, * html .menu ul ul a:visited {width:150px;w\idth:128px;}
+
+/* style the top level hover */
+.menu a:hover, .menu ul ul a:hover{color:#fff; background:#949e7c;}
+.menu :hover > a, .menu ul ul :hover > a {color:#fff;background:#efefef;}
+
+/* make the second level visible when hover on first level list OR link */
+.menu ul li:hover ul,
+.menu ul a:hover ul{visibility:visible; }
+/* keep the third level hidden when you hover on first level list OR link */
+.menu ul :hover ul ul{visibility:hidden;}
+/* make the third level visible when you hover over second level list OR link */
+.menu ul :hover ul :hover ul{ visibility:visible;}
+

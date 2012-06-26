@@ -1,0 +1,9 @@
+<% @companies.each do |c| %>
+	<%= c.name %><br>
+	<%= c.address %><br>
+	<%= c.city %>, <%= c.state %>, <%= c.zip %><br>
+	<%=link_to "Edit", :action => :user_edit, :id => c.id%> | <%=link_to "Delete", :action => :destroy, :id => c.id %>
+	<br><br>
+	<%end%>
+	<br><br>
+	<%=link_to "Add New", :action => :user_new%>

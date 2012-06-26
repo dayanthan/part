@@ -1,0 +1,28 @@
+
+<h3>Billing Information</h3><br>
+<% form_tag :action => 'pay' do %>
+  
+
+					
+					<label>Credit Card type: 
+					<%= select :user, :card_type, [["Select Card Type", ""],["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]] %></label><br><br>
+
+
+					
+
+					<label>CardNumber: 
+					<%= text_field :user, :card_number,:size=>30 -%></label><br>
+					<label>FirstName: 
+					<%= text_field :user, :first_name,:size=>15 -%></label><br>
+					<label>LastName: 
+					<%= text_field :user, :last_name,:size=>15 -%></label>
+
+					<label>CVV: 
+					<%= text_field :user, :card_verification_value ,:size=>4-%></label><br>
+
+					<label>Card expiry Date : 
+					<%= date_select (:user, :card_expiration_on, :start_year=>Time.now.year,:end_year => Time.now.year+15,:discard_day => true,:order => [:month,:year],:add_month_numbers =>true) %></label>
+  <%= submit_tag "Pay" %>
+
+
+

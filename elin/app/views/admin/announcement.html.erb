@@ -1,0 +1,13 @@
+<table align="left" >
+<tr><td>
+<%= form_tag({controller=>'admin',:action => 'update_announcement'}) -%> 
+<table>
+<tr><td><label for="announcement_title">Title:</label> </td>
+<td><%= text_field :announcement, :title-%></td></tr>
+<tr><td><label for="announcement_description">Description: </label></td>
+<td><%= text_area :announcement,:description,:class =>'te'-%> </td></tr>
+<tr><td><label for="announcement_status">Status:</label></td>
+<td><%= select :announcement, :status, [['Active','1'],['Inactive','0']] %></td></tr></table>
+<%= submit_tag 'Update Announcement' -%>
+
+</td></tr></table>

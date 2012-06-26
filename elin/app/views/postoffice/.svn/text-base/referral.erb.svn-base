@@ -1,0 +1,129 @@
+<div align="center"><img src="http://lloydsliens.com/images/e-lien-logo-green-sm.png"></div>
+
+<center>
+<h1>You have a new referral from E-Lien!</h1>
+
+<h2>Login to <a href="http://lloydsliens.com">E-Lien</a> to import this referral to your E-Lien account.</h2><br><br>
+</center>
+
+<h2>Patient Information</h2>
+<b>Name</b><br> 
+<%= @referral.patient_last.to_s + ", " + @referral.patient_first.to_s%><br><br>
+
+<b>Address</b><br>
+<%= @referral.patient_address.to_s %><br>
+<%= @referral.patient_city.to_s  + ", " + @referral.patient_state.to_s + ", " + @referral.patient_zip.to_s %><br><br>
+
+<b>Home Phone</b><br>
+<%= @referral.patient_home.to_s%><br><br>
+
+<b>Cell Phone</b><br>
+<%= @referral.patient_cell.to_s%><br><br>
+
+<h2>Patient Attorney Information</h2>
+<b>Name</b><br>
+<%= @referral.patient_attorney_name.to_s%><br><br>
+
+<b>Address</b><br>
+<%= @referral.patient_attorney_address.to_s%><br>
+<%= @referral.patient_attorney_city.to_s  + ", " + @referral.patient_attorney_state.to_s + ", " + @referral.patient_attorney_zip.to_s %><br><br>
+
+<b>Phone</b><br>
+<%= @referral.patient_attorney_phone.to_s%><br><br>
+
+<b>Fax</b><br>
+<%= @referral.patient_attorney_fax.to_s%><br><br>
+<h2>Accident Date</h2>
+
+<%= @referral.case_accident_date.to_s%><br><br>
+
+<h2>Patient Insurance Information</h2>
+<b>Insurance Company</b><br>
+<%= @referral.patient_insurance_name.name.to_s %><br><br>
+
+<b>Address</b><br>
+<%= @referral.patient_insurance_address.to_s %><br>
+<%= @referral.patient_insurance_city.to_s  + ", " + @referral.patient_insurance_state.to_s + ", " + @referral.patient_insurance_zip.to_s %><br><br>
+
+<b>Adjuster</b><br>
+<%= @referral.patient_insurance_adjuster.to_s%><br><br>
+
+<b>Phone</b><br>
+<%= @referral.patient_insurance_phone.to_s%><br>
+<b>Ext: </b><%= @referral.patient_insurance_ext.to_s%><br><br>
+
+<b>Claim Number</b><br>
+<%= @referral.patient_insurance_claim.to_s%><br><br>
+
+<h2>Defendant Information</h2>
+<b>Name</b><br> 
+<%= @referral.defendant_name.to_s %><br><br>
+
+<b>Address</b><br>
+<%= @referral.defendant_address.to_s %><br>
+<%= @referral.defendant_city.to_s  + ", " + @referral.defendant_state.to_s + ", " + @referral.defendant_zip.to_s %><br><br>
+
+<b>Home Phone</b><br>
+<%= @referral.defendant_home.to_s%><br><br>
+
+<b>Cell Phone</b><br>
+<%= @referral.defendant_cell.to_s%><br><br>
+
+<h2>Defendant Insurance Information</h2>
+<b>Insurance Company</b><br>
+<%= @referral.defendant_insurance_name.name.to_s%><br><br>
+
+<b>Address</b><br>
+<%= @referral.defendant_insurance_address.to_s %><br>
+<%= @referral.defendant_insurance_city.to_s  + ", " + @referral.defendant_insurance_state.to_s + ", " + @referral.defendant_insurance_zip.to_s %><br><br>
+
+<b>Adjuster</b><br>
+<%= @referral.defendant_insurance_adjuster.to_s%><br><br>
+
+<b>Phone</b><br>
+<%= @referral.defendant_insurance_phone.to_s%><br>
+<b>Ext: </b><%= @referral.defendant_insurance_ext.to_s%><br><br>
+
+<b>Claim Number</b><br>
+<%= @referral.defendant_insurance_claim.to_s%><br><br>
+
+<h2>Other Responsible Party Information</h2>
+<b>Name</b><br> 
+<%= @referral.other_name.to_s %><br><br>
+
+<b>Address</b><br>
+<%= @referral.other_address.to_s %><br>
+<%= @referral.other_city.to_s  + ", " + @referral.other_state.to_s + ", " + @referral.other_zip.to_s %><br><br>
+
+<b>Home Phone</b><br>
+<%= @referral.other_home.to_s%><br><br>
+
+<b>Cell Phone</b><br>
+<%= @referral.other_cell.to_s%><br><br>
+
+<h2>Other Insurance Information</h2>
+<b>Insurance Company</b><br>
+<%= @referral.other_insurance_name.name.to_s%><br><br>
+
+<b>Address</b><br>
+<%= @referral.other_insurance_address.to_s %><br>
+<%= @referral.other_insurance_city.to_s  + ", " + @referral.other_insurance_state.to_s + ", " + @referral.other_insurance_zip.to_s %><br><br>
+
+<b>Adjuster</b><br>
+<%= @referral.other_insurance_adjuster.to_s%><br><br>
+
+<b>Phone</b><br>
+<%= @referral.other_insurance_phone.to_s%><br>
+<b>Ext: </b><%= @referral.other_insurance_ext.to_s%><br><br>
+
+<b>Claim Number</b><br>
+<%= @referral.other_insurance_claim.to_s%><br><br>
+
+<center>
+<h2>Login to <a href="http://lloydsliens.com">E-Lien</a> to import this referral to your E-Lien account.</h2><br><br>
+
+<small>Advertisement</small><br>
+<!--/* E-Lien No Cookie Image Tag v2.4.4 */-->
+
+<a href='http://ads.lloydsliens.com/www/delivery/ck.php?zoneid=8' target='_blank'><img src='http://ads.lloydsliens.com/www/delivery/avw.php?zoneid=8' border='0' alt='' /></a>
+</center>

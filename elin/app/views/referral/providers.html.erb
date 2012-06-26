@@ -1,0 +1,13 @@
+<br clear="all">
+<%= link_to "Back", :action => :index %><br><br>
+<% @providers.each do |p| %>
+	<div style="float:left;border:solid 1px #1A8BCB;padding:10px 5px;width:150px;margin:4px;">
+	<b><%= p.company %></b><br>
+	<i><%= p.description %></i><br>
+	<b>Address</b><br>
+	<%= p.address %><br>
+	<%= p.city %>, <%= p.state %>, <%= p.zip %><br>
+	<%= p.phone %><br>
+	<%= link_to "Click here to Refer", :action => 'create', :provider => p.id, :lien => params[:lien] %><br>
+	</div>
+<% end %>

@@ -1,0 +1,18 @@
+<%#= error_messages_for 'lien' %>
+
+<!--[form:lien]-->
+
+<p><label for="lien_patient_first">Patient's First name</label><br/>
+<%= text_field 'lien', 'patient_first'  , :size => "25", :onblur => :"new Effect.Highlight(this);" %></p>
+
+
+<p><label for="lien_patient_last">Patient's Last name</label><br/>
+<%= text_field 'lien', 'patient_last', :size => "25", :onblur => :"new Effect.Highlight(this);" %></p>
+
+<p><label for="lien_case_accident_date">Accident date</label><br/>
+<%= date_select 'lien', 'case_accident_date'  %></p>
+
+<p><label for="lien_case_lien_amount">Lien amount</label><br/>
+$<%= text_field 'lien', 'case_lien_amount'  , :size => "8", :onblur => :"new Effect.Highlight(this);" %></p>
+<!--[eoform:lien]-->
+

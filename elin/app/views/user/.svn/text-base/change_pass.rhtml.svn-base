@@ -1,0 +1,1 @@
+Enter new password here: <%= password_field :user, :password , :size => '25' %><br /><br />

@@ -1,0 +1,11 @@
+<p style="font-size:20px; text-align:center;"><b>Forgot_Password</b></p>
+<div style="margin:auto; width:300px; height:50px; font-size:14px; text-align:center; border:1px solid #348BCB; padding: 30px">
+
+<%= form_tag password_resets_path, :method => :post do %>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email] %>
+  </div>
+  <div class="actions"><%= submit_tag "Reset Password" %></div>
+<% end %>
+</div>

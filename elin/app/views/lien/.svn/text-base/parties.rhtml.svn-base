@@ -1,0 +1,75 @@
+<br><br>
+<div class="css_col_left">
+		<div class="edit_header">Defendant</div>
+		<b>Name:</b><br> <%= text_field :lien, :defendant_name, :size => 25, :maxlength => 25 %> <br>
+		<b>Address:</b><br> <%= text_field :lien, :defendant_address, :size => 25, :maxlength => 14 %> <br>
+		<b>City:</b><br> <%= text_field :lien, :defendant_city, :size => 25, :maxlength => 15 %><br>
+		<b>State:</b><br> <%= text_field :lien, :defendant_state, :size => 25, :maxlength => 2 %><br>
+		<b>Zip:</b><br> <%= text_field :lien, :defendant_zip, :size => 25, :maxlength => 10 %><br>
+		<b>Home Phone:</b><br> <%= text_field :lien, :defendant_home, :size => 25 %><br>
+		<b>Cell Phone:</b><br> <%= text_field :lien, :defendant_cell, :size => 25 %><br>
+				
+</div>
+<div class="css_col_right">
+	
+		<div class="edit_header">Other Responsible Party</div>
+		<b>Name:</b><br> <%= text_field :lien, :other_name, :size => 25, :maxlength => 25 %> <br>
+		<b>Address:</b><br> <%= text_field :lien, :other_address, :size => 25, :maxlength => 14 %> <br>
+		<b>City:</b><br> <%= text_field :lien, :other_city, :size => 25, :maxlength => 15 %><br>
+		<b>State:</b><br> <%= text_field :lien, :other_state, :size => 25, :maxlength => 2 %><br>
+		<b>Zip:</b><br> <%= text_field :lien, :other_zip, :size => 25, :maxlength => 10 %><br>
+		<b>Home Phone:</b><br> <%= text_field :lien, :other_home, :size => 25 %><br>
+		<b>Cell Phone:</b><br> <%= text_field :lien, :other_cell, :size => 25 %><br>
+				
+</div>
+<div class="css_tr">&nbsp;</div>
+<div class="css_col_left">
+
+			<div class="edit_header">Defendant's Insurance Company:</div> 
+				<select id="defendant_insurance_company" name="lien[defendant_insurance_company]">
+					<%= options_for_select(InsuranceCompany.find(:all, :conditions => "created_by = 0 OR created_by =" + @user.id.to_s + " ", :order => "name ASC").collect {|c| [ c.name, c.id ] }, @lien.defendant_insurance_company.to_i) %>
+				</select><br>
+				<small><%= link_to '(edit list)', {:action => :list, :controller => :user_insurance, :back_to_lien => @lien.id }%></small><br>
+		  	<%= observe_field 'defendant_insurance_company',
+				 :update => 'defendant_insurance_info',
+			 	:url    => { :action => 'insurance_defendant'},
+			 	:with   => "id" %>
+		  	
+			  <div id="defendant_insurance_info">
+				<b>Address:</b><br> <%= text_field :lien, :defendant_insurance_address , :size => 25, :maxlength => 14 %><br>
+				<b>City:</b><br> <%= text_field :lien, :defendant_insurance_city, :size => 25, :maxlength => 15 %><br>
+				<b>State:</b><br> <%= text_field :lien, :defendant_insurance_state , :size => 25, :maxlength => 2 %><br>
+				<b>Zip:</b><br> <%= text_field :lien, :defendant_insurance_zip , :size => 25, :maxlength => 10 %><br>
+			</div>
+			<b>Adjuster:</b><br> <%= text_field :lien, :defendant_insurance_adjuster , :size => 25, :maxlength => 25 %><br>
+			<b>Phone:</b><br> <%= text_field :lien, :defendant_insurance_phone , :size => 13 %>
+			<b>Ext:</b> <%= text_field :lien, :defendant_insurance_ext , :size => 6 %><br>
+			<b>Claim/Policy #:</b><br> <%= text_field :lien, :defendant_insurance_claim, :size => 25, :maxlength => 25 %><br>  
+	
+</div>
+<div class="css_col_right">
+		
+			<div class="edit_header">Other's Insurance Company:</div> 
+				<select id="other_insurance_company" name="lien[other_insurance_company]">
+					<%= options_for_select(InsuranceCompany.find(:all, :conditions => "created_by = 0 OR created_by =" + @user.id.to_s + " ", :order => "name ASC").collect {|c| [ c.name, c.id ] }, @lien.other_insurance_company.to_i) %>
+				</select><br>
+				<small><%= link_to '(edit list)', {:action => :list, :controller => :user_insurance, :back_to_lien => @lien.id }%></small><br>
+		  
+			<%= observe_field 'other_insurance_company',
+			 	:update => 'other_insurance_info',
+			 	:url    => { :action => 'insurance_other'},
+			 	:with   => "id" %>
+
+			<div id="other_insurance_info">
+				<b>Address:</b><br> <%= text_field :lien, :other_insurance_address , :size => 25, :maxlength => 25 %><br>
+				<b>City:</b><br> <%= text_field :lien, :other_insurance_city, :size => 25, :maxlength => 15 %><br>
+				<b>State:</b><br> <%= text_field :lien, :other_insurance_state , :size => 25, :maxlength => 2 %><br>
+				<b>Zip:</b><br> <%= text_field :lien, :other_insurance_zip , :size => 25, :maxlength => 10 %><br>
+			</div>
+			<b>Adjuster:</b><br> <%= text_field :lien, :other_insurance_adjuster , :size => 25, :maxlength => 25 %><br> 
+			<b>Phone:</b><br> <%= text_field :lien, :other_insurance_phone , :size => 13 %>
+			<b>Ext:</b><%= text_field :lien, :other_insurance_ext , :size => 6 %><br> 
+			<b>Claim/Policy #:</b><br> <%= text_field :lien, :other_insurance_claim, :size => 25, :maxlength => 25 %><br> 
+
+</div>
+<div class="css_tr"></div>

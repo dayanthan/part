@@ -1,0 +1,31 @@
+<h2>User lookup</h2>
+	<div id="search"> 
+	Search<br> 
+	
+	<%= text_field "client", "search", "style" => "font-size:21px" -%><br>
+	<small style="border-bottom:solid 2px blue;">Lookup user above and click a user to view their transactions.</small><br><br>
+	
+	<%= observe_field :client_search, 
+	:frequency => 1.0, 
+	:update => 'results',
+	:loading => 'Element.show("loading")', 
+	:complete => 'Element.hide("loading")',  
+	:url => { :controller => :file_admin, :action=> :search_users }, 
+	:with => "'search=' + encodeURIComponent(value)" 
+	%>
+	<div id="loading" style="display:none;"><p><img height="20px" width="20px" src="/images/ajax-loader.gif">Searching...</p></div>
+	<div id="results">
+		
+		
+	</div>
+	</div>
+	
+	
+<h2>Stats</h2><br>
+Total Transactions: 
+<%= EFile.count(:conditions => "status != 0")%><br><br>
+Pending Transactions: 
+<%= EFile.count(:conditions => "status = 0")%><br><br>
+
+Failed Transactions: 
+<%= EFile.count(:conditions => "status = 5")%><br><br>

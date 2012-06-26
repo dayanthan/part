@@ -1,0 +1,84 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+	<head> 
+		
+			
+	</head> 
+	<body> 
+		<div id="container">
+		
+			
+			<div id="top_ad" style="text-align:center;margin:5px auto;">
+				
+
+			</div>
+		
+			<% if flash[:notice] %><div class="notice"><%= flash[:notice] %></div><% end %>
+			<div id="content"> 
+
+				<div id="contentContainer">
+					
+					
+					<%= error_messages_for 'user' -%> 
+					<fieldset> 
+						<center><h1>New Admin</h1></center><br>
+					<table>
+					<tr>
+						
+					<td align="right">
+
+<% form_for :user, :url => { :action => :aaduscreate } do |f| %>
+					
+					<label for="user_login">Desired Login: 
+					<%= f.text_field :login ,:onfocus => "new Effect.Appear('loginNote')", :onblur => "Element.hide('loginNote')" %></label> <br>
+					<div id="loginNote" style="display:none;" class="signupNote">Login must be 5-15 characters</div>
+					<label for="user_password">Password: 
+					<%= f.password_field :password, :value => '', :onfocus => "new Effect.Appear('passNote')", :onblur => "Element.hide('passNote')" %></label> <br>
+					<div id="passNote" style="display:none;" class="signupNote">Password must be at least 6 characters</div>
+					<label for="user_email">Email: 
+					<%= f.text_field :email, :onfocus => "new Effect.Appear('mailNote')", :onblur => "Element.hide('mailNote')" %></label> <br>	
+					<div id="mailNote" style="display:none;" class="signupNote">Must be a valid email address</div>
+					
+					<br><hr><br>
+					<label for="user_physician_name">Physician's Name: 
+					 <span style="color:black">Dr.</span> <%= f.text_field :physician_name %></label> <br>
+					<label for="user_clinic">Clinic's Name: 
+					<%= f.text_field :clinic %></label> <br>
+					<label for="user_address">Address: 
+					<%= f.text_field :address %></label> <br>
+					<label for="user_city">City: 
+					<%= f.text_field :city %></label> <br>
+					<label for="user_state">State: 
+					<%= f.text_field :state, :size => '3', :maxlength=> 2, :onfocus => "new Effect.Appear('stateNote')", :onblur => "Element.hide('stateNote')" %></label>
+					<div id="stateNote" style="display:none;" class="signupNote">Please enter your state's two character postal abbreviation.  This customizes the format of the lien for your state.</div>
+					<label for="user_zip">Zip: 
+					<%= f.text_field :zip, :size => 6, :maxlength => 5,:onfocus => "new Effect.Appear('zipnote')", :onblur => "Element.hide('zipnote')" %></label>  <br><br>
+					<div id="zipnote" style="display:none;" class="signupNote">Zip should be exactly 5 digits</div>
+					<label for="user_phone">Phone: 
+					<%= text_field :user, :phone_area, :size => 4, :maxlength => 3 -%> <%= text_field :user, :phone_prefix, :size => 4, :maxlength => 3 -%> <%= text_field :user, :phone_suffix, :size => 5, :maxlength => 4 -%></label> <br>
+					<br><br>
+					<label for="user_tax">Tax ID Number: 
+					<%= f.text_field :tax, :onfocus => "new Effect.Appear('taxNote')", :onblur => "Element.hide('taxNote')" -%></label>  <div id="taxNote" style="display:none;" class="signupNote">This is only required for Oklahoma users.</div>
+					<br><br>
+					<label for="user_payable">The name of company or individual the tax id number is associated with:<br>
+					<%= f.text_field :payable, :onfocus => "new Effect.Appear('payableNote')", :onblur => "Element.hide('payableNote')"  %></label> <div id="payableNote" style="display:none;" class="signupNote">This is to whom the checks will be made out.</div>
+					
+					<br><br>
+					
+					<label for="user_county">County Jurisdiction: 
+					<%= f.text_field :county %></label> <br>
+					
+					<%= submit_tag 'Create my account' -%>
+					<% end %>
+					</center>
+					</td>
+					<td width="15%"></td>
+					</tr>
+					</table>
+					</fieldset> 
+					</form>
+				</div>
+			</div> 
+			</div>
+			</body> 
+</html>

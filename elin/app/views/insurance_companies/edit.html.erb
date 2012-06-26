@@ -1,0 +1,9 @@
+<h1>Editing insurance_company</h1>
+
+<% form_tag :action => 'update', :id => @insurance_company do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Edit' %>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @insurance_company %> |
+<%= link_to 'Back', :action => 'list' %>

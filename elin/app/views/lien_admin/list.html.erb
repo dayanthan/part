@@ -1,0 +1,50 @@
+<h1>Lien Admin</h1>
+<%= link_to 'Back to menu', :controller => 'admin', :action => 'menu' %></small>
+<br><br>
+	<small>
+		<%= form_tag :action => 'printAllDay'%>
+		Print all from day: <%= date_select('from', 'date', :order => [:month, :day, :year], :name => 'date')%>
+		<%= submit_tag 'Print' %>
+		</form><br><br>
+		<b>Showing</b> <%= @numberOfLiens %> Lien(s)
+	<table width="700px">
+		<th align="left">Not Printed</th><th align="left">Printed</th><th></th><th align="left">Area Code</th>
+		<tr>
+			<td><%= link_to 'No Attorney', :action => 'list_no_attorney' %></td>
+			<td><%= link_to 'No Attorney', :action => 'list_all_no_attorney' %></td>
+			<td></td><td> <%= link_to "All", :action => 'filterClear' if session['areaCode']%> <%= link_to "918", :action => 'filter918'%> <%= link_to "405", :action => 'filter405'%> <%= link_to "580", :action => 'filter580'%></td>
+		</tr>
+		<tr>
+			<td><%= link_to 'All', :action => 'list' %></td>
+			<td><%= link_to 'All', :action => 'list_all' %></td>
+		</tr>
+	</table>
+</small></center>
+	<br><br>
+<style type="text/css">
+td { padding-right:10px;}
+</style>
+<center><table style="border-collapse:collapse;" width="90%"  cellpadding="5">
+<th>Date Created</th><th valign="bottom">Patient's Name</th><th valign="bottom">Attorney's Name</th><th valign="bottom">Accident Date</th><th>Physician</th><th>Print</th>
+<% @total = 0 %>
+<% @liens.each do |lien| %> 
+<% row_color = cycle("CCCCCC", "FFFFFF")%>
+	
+<tr class="lien<%= 'Sent' if lien.letter_sent == true %>" id="row-<%= lien.id %>" style="background: #<%= row_color %>">
+<td><%= lien.created_at.to_formatted_s(:short) -%></td>
+<td><%=  h(lien.patient_last) + ", " + h(lien.patient_first) -%><br><small><%= h(lien.patient_city)%><br><%= h(lien.patient_home)%></small></td>
+<td><%= h(lien.patient_attorney_name) %></td>
+<td><%= h(lien.case_accident_date) %></td>
+<td><%= h(User.find(lien.user_id).physician_name) %></td>
+
+<td align="right"><%= button_to "Print Letter", {:action => "letter", :id => lien.id}, :onclick => "new Effect.Fade('row-" + lien.id.to_s + "')"  %></td>
+
+</tr>
+	
+<% end %>
+</table>
+<br><br>
+
+<%= will_paginate @liens %>
+
+

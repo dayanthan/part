@@ -1,0 +1,34 @@
+<h1>Listing Promocodes</h1>
+<table>
+<tr>
+<th>ID</th>
+
+<th>PromoCode</th>
+<th>Price</th>
+<th>Valid Up to</th>
+<th>Used</th>
+</tr>
+<tr>
+<% for i in @promocode %>
+<td><%= i.id %></td>
+<td><%= i.name %></td>
+<td><%= i.price %></td>
+<td><%= i.valid.strftime("%B %d, %Y") %></td>
+<td>
+<% if i.used %>
+<%= 'Yes' %>
+<% else %>
+<%= 'No' %>
+<% end %>
+	
+</td>
+
+<td><%= link_to 'Edit', :action => 'edit', :id => i.id %></td>
+<td><%= link_to 'Destroy', { :action => 'delete', :id => i.id },
+:confirm => 'Are you sure?',
+:method => :post %></td>
+</tr>
+<% end %>
+</table>
+
+<%= link_to 'Generate New Promocode', :action => 'new' %>

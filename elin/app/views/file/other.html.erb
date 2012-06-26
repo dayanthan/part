@@ -1,0 +1,2 @@
+<%= link_to "Rejected", :action => :rejected%> (<%= EFile.count(:conditions => "user_id = "+session[:user].id.to_s+ " AND status = 3")%>)<br><br>
+<%= link_to "Failed", :action => :failed%> (<%= EFile.count(:conditions => "user_id = "+session[:user].id.to_s+ " AND status = 5")%>)

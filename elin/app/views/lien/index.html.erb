@@ -1,0 +1,52 @@
+<div style="margin: 0 auto;">
+<% unless session[:user] %> 
+<%= session[:login_trys] %>
+<%#= error_messages_for 'login' %><br/>
+<div style="border-top:solid 1px #cccccc;border-bottom:solid 1px #cccccc;padding:8px;">
+	<div id="shortInfo"><span style="font-size:120%">E-Lien is an online <b>lien management</b> tool for medical providers.</span> <a style="font-size:80%" href="#" onclick="new Effect.Appear('moreInfo'); new Effect.Fade('shortInfo')">More Info</a></div>
+	<div id="moreInfo" style="display:none">
+		<span style="font-size:120%">E-lien is a web based HIPPA compliant Medical Lien Management tool that is available to Medical Providers.</span> It enables a medical provider to enter information into the software allowing E-lien to prepare and file medical liens and releases correctly.  The application also allows the users to manage their liens by using E-Lien's management tools, such as: 
+		<br><br>
+	<ul style="margin-left:80px">
+		<li>Dated Case Notes</li>
+		<li>Drop down Insurance databases: auto-fills insurance information</li>
+		<li>Sort and Search features</li>
+		<li>Quickly total outstanding lien balances</li>
+		<li>Lien release reminders; which will remind you to meet the 30 day release law <small>(if applicable in your state)</small></li>
+		<li>Receive Referrals from other medical providers! <small>(Extra Paid Feature. See below for more info.)</small></li>
+	</ul>
+		<br><br>
+			 The <b>Referral System</b> enables other E-Lien users to refer their patients to you, through E-Lien, thereby allowing the referrer to transfer the patient and defendant's name, address, phone, insurance information, and attorney's name and address to your account electronically.  This will reduce time spent tracking down patient information.  Please consider referral link advertising with E-Lien.
+	</div>
+</div>
+
+<br clear="all">
+<%= image_tag "e-lien-box.png", :style => "float:left"%>
+<div style="float:right;margin-top:10px;">
+<%= form_tag({:controller => 'user', :action => 'login'}, {:id => "login_form"}) -%> 
+	<label for="user_login">Login:</label><br /> 
+	<%= text_field :user, :login -%><br /> 
+	<label for="user_login">Password:</label><br /> 
+	<%= password_field :user, :password -%><br /> 
+	<%= submit_tag 'Login' -%> 
+	
+</form>
+  <%= link_to "forgotten password?", new_password_reset_path %><br />
+<%#= link_to 'Forgot Password', :controller => 'password_resets', :action => 'new' %>
+<%#= link_to 'Forgot Password', :controller => 'user', :action => 'forgotpassword' %>
+Need an account?  <%= link_to 'Signup today!', :controller => 'user', :action => 'type' %> 
+</div>
+<br clear="all">
+<center>
+Download <a href="downloads/E-Lien-win.zip">desktop launcher</a> <small>(windows)</small> or <a href="downloads/E-Lien-mac.zip">dashboard widget</a> <small>(mac)</small>.
+<br>
+<br>
+
+<% else %> 
+
+<br clear="all"><br>
+Click Lookup to start
+
+<% end %>
+
+</div>

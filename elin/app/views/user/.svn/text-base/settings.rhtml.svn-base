@@ -1,0 +1,7 @@
+
+
+<div style="border: solid 1px #CCC">
+Paper Size: <%= select( "user", "paper", { "Letter" => 0, "Legal" => 1}) %><br><br>
+</div><br /><br />
+
+<br />

@@ -1,0 +1,81 @@
+<center>
+	<%= flash[:notice] %>
+</center>
+<center>
+	<h2>Billing Information</h2>
+</center>
+<h1 align="center">$59 Annual Membership</h1>
+<table style="padding-left: 0px; border-left-width: 0px;">
+	<tr>
+		<td> <% form_for :user, :url => { :action => :old_user_pay } do |f| %>
+		<table>
+			<tr>
+				<td><label for="user_promocode">Promocode:</label></td><td><%= f.text_field :promocode,:onfocus => "new Effect.Appear('promocodenote')", :onblur => "Element.hide('promocodenote')"%>
+				<div id="promocodenote" style="display:none;" class="signupNote">Enter Code if you have.Otherwise leave this field blank.</div></td>
+			</tr>
+			<tr>
+				<td><label for="user_card_type">Card Type:</label></td><td><%= f.select :card_type ,[["Select Card Type", ""],["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]] %></td>
+			</tr>
+			<tr>
+				<td><label for="user_card_number">Card Number:</label></td><td><%= f.text_field :card_number %></td>
+			</tr>
+			<tr>
+				<td><label for="user_first_name">First Name:</label></td><td><%= f.text_field :first_name %></td>
+			</tr>
+			<tr>
+				<td><label for="user_last_name">Last Name:</label></td><td><%= f.text_field :last_name %></td>
+			</tr>
+			<tr>
+				<td><label for="user_card_verification_value">Card Verification Value:</label></td><td><%= f.text_field :card_verification_value ,:size=>3%></td>
+			</tr>
+			<tr>
+				<td><label for="user_month">Card Expires on:</label></td><td><%= f.select :month,[["1-January",1],["2-February",2],["3-March",3],["4-April",4],["5-May",5],["6-June",6],["7-July",7],["8-August",8],["9-September",9],["10-October",10],["11-November",11],["12-December",12]] %><label for="user_year">Year:</label><%= f.select :year,Time.now.year..Time.now.year+15 %></td>
+			</tr>
+			<tr> <td colspan="2"><center><h1>Billing Address</h1></center></td></tr><tr></tr><tr></tr>
+			<tr>
+				<td><label for="user_bill_address_1">Address1: </td><td><%= f.text_field :bill_address_1 %></label><br></td>
+			</tr>
+			<tr>
+				<td><label for="user_bill_address_2">Address2: </td><td><%= f.text_field :bill_address_2 %></label><br></td>
+			</tr>
+			<tr>
+				<td><label for="user_bill_city">City: </td><td><%= f.text_field :bill_city %></label><br></td>
+			</tr>
+<tr>
+	<td><label for="user_bill_state">State:</td><td> <%= f.select :bill_state, [["ALABAMA","Alabama"],["ALASKA","Alaska"],["ARIZONA","Arizona"],
+	["ARKANSAS","Arkansas"],["CALIFORNIA","California"],["COLORADO","Colorado"],["CONNECTICUT","Connecticut"],
+	["DELAWARE","Delaware"],["FLORIDA","Florida"],["GEORGIA","Georgia"],["HAWAII","Hawaii"],["IDAHO","Idaho"],
+	["ILLINOIS","Illinois"],["INDIANA","Indiana"],["IOWA","Iowa"],["KANSAS","Kansas"],["KENTUCKY","Kentucky"],
+	["LOUISIANA","Louisiana"],["MAINE","Maine"],["MARYLAND","Maryland"],["MASSACHUSETTS","Massachusetts"],
+	["MICHIGAN","Michigan"],["MINNESOTA","Minnesota"],["MISSISSIPPI","Mississippi"],["MISSOURI","Missouri"],
+	["MONTANA","Montana"],["NEBRASKA","Nebraska"],["NEVADA","Nevada"],["NEW HAMPSHIRE","HAMPSHIRE"],
+	["NEW JERSEY","JERSEY"],["NEW MEXICO","MEXICO"],["NEW YORK","YORK"],["NORTH CAROLINA","CAROLINA"],
+	["NORTH DAKOTA","DAKOTA"],["OHIO","Ohio"],["OKLAHOMA","Oklahoma"],["OREGON","Oregon"],
+	["PENNSYLVANIA","Pennsylvania"],["RHODE","ISLAND"],["SOUTH CAROLINA","CAROLINA"],["SOUTH DAKOTA","DAKOTA"],
+	["TENNESSEE","Tennessee"],["TEXAS","Texas"],["UTAH","Utah"],["VERMONT","Vermont"],["VIRGINIA","Virginia"],
+	["WASHINGTON","Washington"],["WEST VIRGINIA","West Virginia"],["WISCONSIN","Wisconsin"],["WYOMING","Wyoming"]] %></label><br></td>				
+</tr>
+			
+			<tr>
+				<td><label for="user_bill_country">Country: </td><td><%= "United States of America" %></label><br></td>
+			</tr>
+			<tr>
+				<td><label for="user_bill_zip">Zip:</td><td> <%= f.text_field :bill_zip %></label><br></td>
+            </tr>
+			<tr></tr><tr></tr>
+			<tr>
+				<td colspan="2" align="center"><%= submit_tag 'Pay' -%></td>
+			</tr>
+			<tr><td colspan="2" align="center"><h2>Pay By Check Option</h2></td></tr>
+			<tr><td colspan="2" align="center">If paying by check, please make payable and send to:</td></tr>
+			<tr><td colspan="2" align="center">E-LIEN, LLC</td></tr>
+			<tr><td colspan="2" align="center">4634 E. 87th Pl.</td></tr>
+			<tr><td colspan="2" align="center">Tulsa  OK   74137</td></tr>
+			<tr><td colspan="2" align="center">Please include your email address </td></tr>
+			<tr><td colspan="2" align="center">so your promotion code can be </td></tr>
+			<tr><td colspan="2" align="center">sent upon reciept of your check.</td></tr>
+		</table> <% end %> </td>
+	</tr>
+</table>
+<br />
+<br />

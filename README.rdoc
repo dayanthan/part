@@ -1,0 +1,28 @@
+== Welcome to eius=============================
+
+cd eius
+This app used .rvmrc
+so
+bundle install
+rake db:create
+rake db:migrate
+rails s
+
+or
+
+
+delete the .rvmrc file
+and
+
+rvm gemset create eius
+rvm gemset use eius
+bundle install
+rake db:create
+rake db:migrate
+rails s
+
+
+**if you see .rvmrc file use ctrl+h 
+
+
+===================================================

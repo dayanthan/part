@@ -1,0 +1,17 @@
+<%= flash[:notice] %>
+<center><h2>Generate Promo Code</h2></center>
+
+<table align="left">	
+<tr><td>
+<% form_for :promocode, :url => { :action => :save_promocode } do |f| %>
+ <table>				
+
+<tr><td><label for="promocode_name">PromoCode:</label></td><td><%= f.text_field :name %></td></tr>
+<tr><td><label for="promocode_price">Price:</label></td><td><%= f.text_field :price %></td></tr>
+
+
+<tr><td colspan="2" align="center"><%= submit_tag 'Generate' -%></td></tr></table>
+
+<% end %>
+
+</td></tr></table><br /><br />

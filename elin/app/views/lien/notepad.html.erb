@@ -1,0 +1,30 @@
+
+<div style ="border:1px solid #348BCB">
+	<b><h3><%= link_to "Back", :controller => "lien", :action => "list" %></h3></b>
+	<div style="margin-left: 115px;">
+		<table><tr><td>
+	<h1 style='color:#348BCB;'>Notepad</h1>
+	<h2><%= "#{@lien.patient_first} #{@lien.patient_last}" %></h2>
+	<span style="font-size:medium;color:#CCC"><h3 style='color:#B6D201;'>Attorney Info</h3><b><%= @lien.patient_attorney_name.to_s %></b></span><br>
+	<span style="font-size:medium;color:#CCC"><b><%= @lien.patient_attorney_phone.to_s %></b></span><br>
+	</td>
+	<td>
+	
+	<% for note in @lien.notes %>
+		<% row_color = cycle("FFFFFF", "DDEEF7")%>
+		<span style="background:#<%= row_color%>"><%= note.body %> <%= link_to "<img src='/images/delete.png' width='12px' />", {:controller => "lien", :action => 'noteDelete', :id => note.id }, :confirm => 'Are you sure you want to delete this note?' %></span><br>
+	<% end %>
+		</td>
+		</tr>
+	<tr><td colspan="2">
+	
+		<%= form_tag :action => "note", :id => @lien.id %>
+		
+		<%= text_area "note", "body", :value => Date.today.strftime("%B %d, %Y") + "\n",:rows => 15, :style => "background: none repeat scroll 0 0 #FFE47A;" %><br>
+		<%= submit_tag "Save Note" %><p class="footer" align="right">			
+		</p>
+		</form> 
+		
+		</td>
+    </tr></table></div>
+</div>

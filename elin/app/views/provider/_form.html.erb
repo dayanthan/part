@@ -1,0 +1,46 @@
+<%= error_messages_for 'providers' %>
+
+<!--[form:providers]-->
+<p><label for="providers_company">Company</label><br/>
+<%= text_field 'provider', 'company'  %></p>
+
+<p><label for="providers_contact_name">Contact name</label><br/>
+<%= text_field 'provider', 'contact_name'  %></p>
+
+<p><label for="providers_email">Email</label><br/>
+<%= text_field 'provider', 'email'  %></p>
+
+<p><label for="providers_category">Category</label><br/>
+<%= select "provider", "category_id", Category.find(:all).collect {|c| [ c.name, c.id ] }, {:include_blank => 'None'} %>
+
+<p><label for="providers_address">Address</label><br/>
+<%= text_field 'provider', 'address'  %></p>
+
+<p><label for="providers_city">City</label><br/>
+<%= text_field 'provider', 'city'  %></p>
+
+<p><label for="providers_state">State</label><br/>
+<%= text_field 'provider', 'state'  %></p>
+
+<p><label for="providers_zip">Zip</label><br/>
+<%= text_field 'provider', 'zip'  %></p>
+
+<p><label for="providers_phone">Phone </label><br/>
+<%= text_field 'provider', 'phone'  %></p>
+
+<p><label for="providers_description">Description</label><br/>
+<%= text_area 'provider', 'description'  %></p>
+
+<p><label for="providers_start_date">Start Date</label><br/>
+<%= date_select 'provider', 'start_date'  %></p>
+
+<p><label for="providers_contract_length">Contract Length in Months</label><br/>
+<%= text_field 'provider', 'contract_length'  %></p>
+
+<p><label for="providers_rate">Rate </label><br/>
+$<%= text_field 'provider', 'rate'  %></p>
+
+<p><label for="providers_user_id">E-Lien User Account</label><br/>
+<%= select("provider", "user_id", User.find(:all).collect {|u| [ u.login, u.id ] }, {:include_blank => true}) %></p>
+<!--[eoform:providers]-->
+

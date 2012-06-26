@@ -1,0 +1,18 @@
+<h1>Purchased Documents</h1>
+<span style="color:red;font-size:small">Documents will only be available for 90 days after being recorded.  Please download and archive promptly.</span>
+<table width="100%">
+	<th align="left">E-File ID</th><th align="left">Patient Name</th><th align="left">Download</th><th align="left">Date Returned</th><th align="left">Status</th>
+<% for document in @documents %>
+<% if document.updated_at > (Time.now - 90.days) %>
+<tr>
+	<td><%= document.id %></td>
+	<td align="left"><%= document.grantee_first %> <%= document.grantee_last%></td>
+	<td><%= link_to "Download", {:action => :download, :id => document.id}, :onclick => 'Element.show("downloading'+document.id.to_s+'");Element.hide(this)' %><div id="downloading<%=document.id.to_s%>" style="display:none;"><p><img height="20px" width="20px" src="/images/ajax-loader.gif">Downloading...</p></div></td>
+	<td><%= document.returned_date%></td>
+	<td><%=document.status_condition%></td>
+
+</tr>
+<% end %>	
+<% end %>
+</table>
+<br><br>

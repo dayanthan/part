@@ -1,0 +1,27 @@
+
+
+<div style="border: solid 1px #CCC">
+
+Notary Name:<br><%= text_field 'user', 'notary_name', :size => 25 %><br />
+Notary County:<br><%= text_field 'user', 'notary_county', :size => 25 %><br />
+
+</div><br /><br />
+<div style="border: solid 1px #CCC">
+Commision Number:<br><%= text_field 'user', 'notary_commission', :size => 15 %><br />
+Commision Expires:<br>
+<div id="notary_expires"></div>
+
+
+	<% if @user.notary_expires == nil %>
+	
+		<%= link_to_remote "Set",
+			:update => 'notary_expires',
+			:url    => { :action => 'notary_expires' } %>
+</p>
+	<% else %>
+		<%= date_select 'user', 'notary_expires'  %> <%= link_to "clear", :action => :clear_expires_date %></p>
+	<% end %>
+
+
+</div>
+

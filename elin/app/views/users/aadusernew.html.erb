@@ -1,0 +1,28 @@
+<div style="margin:auto; width:400px; height:170px;  border:1px solid #348BCB;padding:0px 0px 10px 10px;">
+<!-- <div style="float:right;margin-top:10px;"> -->
+<%#= render :partial => 'form1' %>
+<%# form_for :users, :url => { :action => :adcreate } do |f| %>
+<!-- , :url => { :action => :signup } -->
+<%# form_tag(create_path, {:method => :get}) do %>
+<% form_tag url_for(:controller => 'users', :action => 'aadusercreate'), :method => 'post' do %>
+
+<%# form_tag(:controller => 'users', :action => 'aadusercreate', :method=>'post' ) do %>
+<%#= form_tag :controller => 'users', :model => 'users', :action => 'aadusercreate', (:method => :post) do %>
+
+<%#= error_messages_for 'users' %>
+
+<p><label for="users_login">Login</label><br/>
+<%= text_field 'users', 'login'  %></p>
+
+<p><label for="users_password">Password</label><br/>
+<%= password_field 'users', 'password'  %></p>
+
+<p><label for="users_email">Email</label><br/>
+<%= text_field 'users', 'email'  %></p>	
+					
+<%end%>
+
+	<%= submit_tag "AdminCreate" %>
+	
+
+</div>

@@ -1,0 +1,21 @@
+
+<div style="margin:auto;width:70%;text-align:right;border: solid 1px #CCC;padding:15px 10px;">
+Physician's Name: <%= text_field :user, :physician_name , :size => '25' %><br /><br />
+
+<%= link_to_remote "Change Password",
+		:update => 'change_password',
+		:url    => { :action => 'change_pass', :id => @user.id} %>
+</p><br /><br />
+<div id="change_password"></div>
+E-Mail: <%= text_field :user, :email , :size => '25' %><br /><br />
+Clinic Name: <%= text_field :user, :clinic , :size => '25' %><br /><br />
+Address: <%= text_field :user, :address , :size => '25' %><br /><br />
+City: <%= text_field :user, :city , :size => '25' %><br><br>
+State: <%= text_field :user, :state , :size => '3', :maxlength => '2' %><br><br>
+Zip: <%= text_field :user, :zip , :size => '25' %><br /><br />
+Phone: <%= text_field :user, :phone_area , :size => '4' %> <%= text_field :user, :phone_prefix , :size => '4' %> <%= text_field :user, :phone_suffix , :size => '5' %><br /><br />
+Tax Id Number: <%= text_field :user, :tax , :size => '25' %><br /><br />
+Make Checks Payable To: <%= text_field :user, :payable , :size => '25' %><br /><br />
+Court Jurisdiction: <%= text_field :user, :county , :size => '25' %><br /><br />
+Newsletter: <%= check_box("user", "newsletter") %>
+</div>
